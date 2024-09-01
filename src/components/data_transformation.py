@@ -69,7 +69,7 @@ class DataTransformation:
             train_df = pd.read_csv(train_path)
             test_df = pd.read_csv(test_path)
 
-            logging.info("Read train and test data completed")
+            logging.info("Reading train and test data completed")
 
             logging.info("Obtaining preprocessing object")
 
@@ -85,7 +85,7 @@ class DataTransformation:
             target_feature_test_df = test_df[target_column_name]
 
             logging.info(
-                f"Applying preprocessing object on training dataframe and testing dataframe."
+                f"Applying preprocessing object on training and testing dataframe."
             )
 
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
